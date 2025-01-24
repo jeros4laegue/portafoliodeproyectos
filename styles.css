@@ -1,41 +1,73 @@
+/* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Encabezado */
 header {
-    background-color: #333;
+    background-color: #007BFF;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Sección de proyectos */
 #proyectos {
-    margin: 20px;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
     background-color: white;
     border-radius: 8px;
 }
 
 .proyecto {
-    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos y descripciones de los proyectos */
 .proyecto h3 {
+    font-size: 22px;
     margin-top: 0;
+}
+
+.proyecto p {
+    font-size: 16px;
+    color: #555;
 }
 
 a {
     color: #007BFF;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Agregar estilo para el pie de página */
 footer {
     text-align: center;
     padding: 10px;
@@ -44,4 +76,19 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilo para la imagen del proyecto */
+.proyecto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.foto-portafolio {
+    max-width: 200px; /* Ajusta el tamaño máximo de la imagen */
+    width: 100%;
+    border-radius: 50%; /* Si quieres hacerla circular */
+    display: block;
+    margin: 20px auto; /* Centrar la imagen */
 }
